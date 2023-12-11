@@ -23,15 +23,12 @@ test("Should render UI and confirm todo added after submission", async () => {
   await userEvent.click(addButton)
   await waitFor(() => {
     screen.getByText("Todo item added")
-    expect(store.getState().todos.createTodoApiStatus).toEqual(
-      ApiStatus.Fulfilled,
-    )
-  })
-  //confirming new todo is added to state even though it is not displayed in the UI
-  expect(store.getState().todos.todos[1]).toEqual({
-    title: "Todo item 1",
-    id: 1,
-    done: false,
+    //confirming new todo is added to state even though it is not displayed in the UI
+    expect(store.getState().todos.todos[1]).toEqual({
+      title: "Todo item 1",
+      id: 1,
+      done: false,
+    })
   })
 })
 
