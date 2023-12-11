@@ -7,6 +7,7 @@ MUI for UI styling\
 React hook form for form interaction\
 yup schema for form validation\
 MSW to mock api behaviour\
+vite-template-redux\
 React router dom for routing
 
 Frontend features\
