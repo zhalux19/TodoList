@@ -1,4 +1,4 @@
-A todo list app usng React for the frontend and .net core for the backend
+A todo list app using React for the frontend and .net core for the backend
 
 Frontend stack\
 Redux Toolkit for state management\
