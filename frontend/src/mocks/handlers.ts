@@ -51,7 +51,7 @@ export const handlers = [
     const todo = { ...request, id, done: false }
     const todos = { ...existingTodos, [id]: todo }
     lightlyPersist(TODO_KEY, todos)
-    return res(ctx.status(200))
+    return res(ctx.status(200), ctx.json(id))
   }),
   rest.delete("/api/todoitems/:id", async (req, res, ctx) => {
     const id = req.params.id as unknown as number

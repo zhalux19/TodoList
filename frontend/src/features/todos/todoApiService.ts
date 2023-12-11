@@ -49,9 +49,10 @@ export const updateTodo = async (todo: Todo): Promise<void> => {
   }
 }
 
-export const addTodo = async (newTodo: NewTodo): Promise<void> => {
+export const addTodo = async (newTodo: NewTodo): Promise<number> => {
   try {
-    await axios.post(`${apiUrl}/todoitems`, newTodo)
+    const { data } = await axios.post(`${apiUrl}/todoitems`, newTodo)
+    return data
   } catch (e) {
     throw e
   }
