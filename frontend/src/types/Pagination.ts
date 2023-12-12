@@ -15,5 +15,5 @@ export type PaginationResponse<T> = {
 export type PaginationState<T> = {
   pageNumber: number
   totalPages: number
-  pageItems: Record<number, T[]>
+  itemsByPage: Record<number, T[]>
 }

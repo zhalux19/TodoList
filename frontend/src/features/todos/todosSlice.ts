@@ -20,7 +20,7 @@ export type TodoState = {
 const defaultPagination: PaginationState<number> = {
   pageNumber: 1,
   totalPages: 0,
-  pageItems: {},
+  itemsByPage: {},
 }
 
 export const initialState: TodoState = {
@@ -61,8 +61,8 @@ const todosSlice = createSlice({
       state.pagination = {
         totalPages,
         pageNumber,
-        pageItems: {
-          ...state.pagination.pageItems,
+        itemsByPage: {
+          ...state.pagination.itemsByPage,
           [pageNumber]: Object.keys(newTodos)
             .map(Number)
             .filter((key) => !isNaN(key)),

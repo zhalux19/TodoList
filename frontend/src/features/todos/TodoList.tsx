@@ -33,7 +33,7 @@ const TodoList = () => {
   }, [])
 
   const todoIds = useAppSelector(
-    (state) => state.todos.pagination.pageItems[pageNumber],
+    (state) => state.todos.pagination.itemsByPage[pageNumber],
   )
   const { pageNumber: page, totalPages: count } = useAppSelector(
     (state) => state.todos.pagination,
@@ -71,7 +71,9 @@ const TodoList = () => {
         ) : (
           <Typography mb={2}>This page is currently empty.</Typography>
         ))}
-      <Pagination count={count} page={page} onChange={handleChange} />
+      {count > 0 && (
+        <Pagination count={count} page={page} onChange={handleChange} />
+      )}
     </>
   )
 }
