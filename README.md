@@ -16,23 +16,23 @@ Mark item as done\
 Delete todo item\
 Create todo\
 Pagination with deep linking instead of state when viewing todos (better user experience)\
-Responsive page for both desktop and mobile divices\
+Responsive page for both desktop and mobile devices\
 State shape is normalised to help with item lookup. Leave room for relational data in the future\
 UI is handling various api status e.g. Loading, error and pending 
 
 Tests\
-Created test for add todo form\
-It covers the test for the initial rendering of the form\
-It tests interaction with the form by submitting the form and get confirmation message\
-It tests the API failer use case and confirm errors message is showing when api call fails\
-Created test for todosSlice just covering fetch todo to showcase the approach\
+Created tests for add todo form\
+It covers the initial rendering of the form\
+It tests interaction with the form by submitting the form and get confirmation message (test coverage for store state, saga and api)\
+It tests the API failure case and confirm errors message is showing when api call fails\
+Created tests for todosSlice just covering fetch todo to showcase the approach\
 Test coverage for the whole slice can be boosted using the same approach
 
 How to run frontend\
 yarn dev should start the application on your local\
 yarn test to run test\
 Please note that atm the frontend can run without the .net core app\
-To connect to the backend just go to the env file and comment out line 2\
+To connect to the backend (make sure backend is running already) just go to the env file and comment out line 2\
 VITE_API_URL="/api"\
 Then uncomment line 4 (Assuming your .net core app is running on the same url as configured in the backend)\
 VITE_API_URL="https://localhost:5001/api"
