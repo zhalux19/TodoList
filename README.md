@@ -15,7 +15,7 @@ View todos\
 Mark item as done\
 Delete todo item\
 Create todo\
-Pagination with deep linking instead of state when viewing todos (better user experience)\
+Generic pagination with deep linking instead of state when viewing todos (better user experience)\
 Responsive page for both desktop and mobile devices\
 State shape is normalised to help with item lookup. Leave room for relational data in the future\
 UI is handling various api status e.g. Loading, error and pending 
