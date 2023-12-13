@@ -1,27 +1,38 @@
-# vite-template-redux
+A todo list app using React for the frontend and .net core for the backend
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
+Frontend stack
+Redux Toolkit for state management
+Redux Saga for middleware
+MUI for UI styling
+React hook form for form interaction
+yup schema for form validation
+MSW to mock api behaviour
+vite-template-redux
+React router dom for routing
 
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
-```
+Frontend features
+View todos
+Mark item as done
+Delete todo item
+Create todo
+Generic pagination with deep linking instead of state when viewing todos (better user experience)
+Responsive page for both desktop and mobile devices
+State shape is normalised to help with item lookup. Leave room for relational data in the future
+UI is handling various api status e.g. Loading, error and pending
 
-## Goals
+Tests
+Created tests for add todo form
+It covers the initial rendering of the form
+It tests interaction with the form by submitting the form and get confirmation message (test coverage for store state, saga and api)
+It tests the API failure case and confirm errors message is showing when api call fails
+Created tests for todosSlice just covering fetch todo to showcase the approach
+Test coverage for the whole slice can be boosted using the same approach
 
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
-
-## Scripts
-
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
-
-## Inspiration
-
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+How to run frontend
+yarn dev should start the application on your local
+yarn test to run test
+Please note that atm the frontend can run without the .net core app
+To connect to the backend (make sure backend is running already) just go to the env file and comment out line 2
+VITE_API_URL="/api"
+Then uncomment line 4 (Assuming your .net core app is running on the same url as configured in the backend)
+VITE_API_URL="https://localhost:5001/api"
