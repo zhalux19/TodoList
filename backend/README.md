@@ -1,20 +1,23 @@
-﻿# CleanArchitectureTodoList
+Backend stack
+ASP.NET Core 8.0
+Entity Framework Core 8
+Clean architecture
+CQRS and MediatR
+AutoMapper
+FluentValidation
+Moq
+AutoFixture
+FluentAssertions
 
-The project was follows clean architecture and CQRS pattern. It is a simple todo list application. 
+Backend features
+Create todo
+Update todo
+Delete todo
+View todos
+Pagination for todos as a complex query to ease the load on both frontend and backend (Avoid querying/rendering huge amount of data)
+Manages users, passwords, profile data, roles, claims, tokens, email confirmation etc using ASP.NET Core Identity
 
-## Build
-
-Run `dotnet build -tl` to build the solution.
-
-## Run
-
-To run the web application:
-
-```bash
-cd .\src\Web\
-dotnet watch run
-```
-
-Navigate to https://localhost:5001. The application will automatically reload if you change any of the source files.
-
+How to run backend
+Set web project as the startup project and just run F5
+Migration scripts will kickin automoatically to create db in SQL server
 
